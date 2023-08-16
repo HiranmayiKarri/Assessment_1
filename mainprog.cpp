@@ -23,7 +23,7 @@ public:
         else if (direction == "W") x--;
         else if (direction == "Up") z++;
         else if (direction == "Down") z--;
-        cout<<direction<<"\n";
+        //cout<<direction<<"\n";
     }
 
     void move_backward() {
@@ -33,7 +33,7 @@ public:
         else if (direction == "W") x++;
         else if (direction == "Up") z--;
         else if (direction == "Down") z++;
-        cout<<direction<<"\n";
+        //cout<<direction<<"\n";
     }
 
     void turn_left() {
@@ -45,7 +45,7 @@ public:
             
         }
         
-        cout<<direction<<"\n";
+        //cout<<direction<<"\n";
     }
 
     void turn_right() {
@@ -55,17 +55,17 @@ public:
             size_t current_index = std::find(directions.begin(), directions.end(), direction) - directions.begin();
             direction = directions[(current_index - 1 + directions.size()) % directions.size()];
         }
-        cout<<direction<<"\n";
+        //cout<<direction<<"\n";
     }
 
     void turn_up() {
         if (direction != "Up") direction = "Up";
-        cout<<direction<<"\n";
+        //cout<<direction<<"\n";
     }
 
     void turn_down() {
         if (direction != "Down") direction = "Down";
-        cout<<direction<<"\n";
+        //cout<<direction<<"\n";
     }
 
     void execute_commands(std::vector<std::string> commands) {
@@ -83,7 +83,7 @@ public:
         std::cout << "Final Position: (" << x << ", " << y << ", " << z << ")\n";
         std::cout << "Final Direction: " << direction << "\n";
     }
-}
+};
 
 int main() {
     int starting_x = 0, starting_y = 0, starting_z = 0;
